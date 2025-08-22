@@ -1,0 +1,6 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="600" fill="#1e293b"/>
+  <rect x="100" y="100" width="1000" height="400" fill="#334155" rx="8"/>
+  <text x="600" y="320" text-anchor="middle" fill="#a5f3fc" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Project Image</text>
+  <text x="600" y="360" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="24">Placeholder</text>
+</svg>

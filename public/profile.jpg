@@ -1,0 +1,6 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="150" r="150" fill="#1e293b"/>
+  <circle cx="150" cy="120" r="40" fill="#64748b"/>
+  <path d="M150 170 C 100 170, 100 220, 150 220 C 200 220, 200 170, 150 170" fill="#64748b"/>
+  <text x="150" y="280" text-anchor="middle" fill="#a5f3fc" font-family="Arial, sans-serif" font-size="16">Winston Zhang</text>
+</svg>
