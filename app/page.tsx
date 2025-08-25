@@ -136,17 +136,17 @@ export default function App() {
       description: "A productivity tool that helps students stay focused. Led a 6-person cross-functional team from concept to delivery in 10 weeks, conducting 20+ live interviews to validate the product direction and define the core feature set. Delivered the fastest complete demo out of 16 teams with a functional MVP.",
       image: "https://placehold.co/1200x600/1e293b/a5f3fc?text=Tabby",
       technologies: ["React", "TypeScript", "Zustand", "CI/CD", "Figma", "Flowchart"],
-      liveUrl: "#", // Update with actual live URL if available
+      liveUrl: null, // No demo for Tabby
       githubUrl: "https://github.com/winston6800/tabby",
       color: "from-blue-500 to-purple-600",
     },
     {
-      title: "Loopspeed",
-      description: "A full-stack application designed for rapid go-to-market testing. Deployed with Next.js and Vercel Edge Functions, it features a persistent user metrics tracking system using SQLite and Prisma ORM.",
-      image: "https://placehold.co/1200x600/1e293b/a5f3fc?text=Loopspeed",
-      technologies: ["Next.js", "TypeScript", "Vercel Edge Functions", "SQLite", "Prisma"],
+      title: "Loops",
+      description: "A productivity app built with Next.js and React to help you focus on important tasks, visualize your progress, and track your time value. Features include hydration-safe design, single-task timer, task history, and cumulative productivity charts.",
+      image: "https://placehold.co/1200x600/1e293b/a5f3fc?text=Loops",
+      technologies: ["Next.js", "React", "TypeScript", "Recharts", "Vercel"],
       liveUrl: "https://loopspeed.vercel.app/",
-      githubUrl: "https://github.com/winston6800/loopspeed", // Assuming this is the repo, user didn't specify.
+      githubUrl: "https://github.com/winston6800/Loops",
       color: "from-green-500 to-teal-600",
     },
     {
@@ -154,8 +154,8 @@ export default function App() {
       description: "A serverless AI-powered calorie tracker built with a containerized Node.js backend on AWS. It uses a fine-tuned GPT-4 API for 95%+ accurate calorie estimation and was launched with a successful go-to-market strategy that generated over 20k impressions on Reddit.",
       image: "https://placehold.co/1200x600/1e293b/a5f3fc?text=Calor.ai",
       technologies: ["Node.js", "React", "AWS Lambda", "Docker", "GPT-4 API", "Stripe"],
-      liveUrl: "#", // Update with actual live URL if available
-      githubUrl: "https://github.com/winston6800/caloriecounter/tree/main",
+      liveUrl: "https://calorie-counter-green.vercel.app/",
+      githubUrl: "https://github.com/winston6800/caloriecounter",
       color: "from-orange-500 to-red-600",
     },
   ];
@@ -212,21 +212,16 @@ export default function App() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group relative overflow-hidden">
-                <span className="relative z-10 flex items-center">
-                  <ExternalLink className="mr-2 h-5 w-5" />
-                  Let's Build Something Bold
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="group hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
-              >
-                <Github className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
-                View Code
-              </Button>
+              <a href="https://github.com/winston6800" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="group hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
+                >
+                  <Github className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
+                  View Code
+                </Button>
+              </a>
             </div>
 
             <div className="absolute bottom-8 animate-bounce">
@@ -244,7 +239,7 @@ export default function App() {
               Proof of Concept
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A record of ideas taken from zero to launch. I don't just talk about building, I ship.
+              A record of ideas taken from zero to launch.
             </p>
           </div>
 
@@ -286,20 +281,26 @@ export default function App() {
                         ))}
                       </div>
                       <div className="flex gap-4">
-                        <Button
-                          variant="outline"
-                          className="group/btn hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
-                        >
-                          <ExternalLink className="mr-2 h-4 w-4 group-hover/btn:rotate-45 transition-transform duration-300" />
-                          Live Demo
-                        </Button>
-                        <Button
-                          variant="outline"
-                          className="group/btn hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
-                        >
-                          <Github className="mr-2 h-4 w-4 group-hover/btn:rotate-12 transition-transform duration-300" />
-                          Code
-                        </Button>
+                        {project.liveUrl && (
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            <Button
+                              variant="outline"
+                              className="group/btn hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
+                            >
+                              <ExternalLink className="mr-2 h-4 w-4 group-hover/btn:rotate-45 transition-transform duration-300" />
+                              Live Demo
+                            </Button>
+                          </a>
+                        )}
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Button
+                            variant="outline"
+                            className="group/btn hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
+                          >
+                            <Github className="mr-2 h-4 w-4 group-hover/btn:rotate-12 transition-transform duration-300" />
+                            Code
+                          </Button>
+                        </a>
                       </div>
                     </CardContent>
                   </div>
@@ -327,20 +328,24 @@ export default function App() {
                   My philosophy is simple: **vision without execution is hallucination.** I am committed to a process of rapid iteration, user-centric design, and relentless implementation to bring ambitious ideas into reality.
                 </p>
                 <div className="flex gap-4 justify-center md:justify-start">
-                  <Button
-                    variant="outline"
-                    className="group hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
-                  >
-                    <Linkedin className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
-                    LinkedIn
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="group hover:bg-primary hover:hover:text-primary-foreground transition-all duration-300 bg-transparent"
-                  >
-                    <Github className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
-                    GitHub
-                  </Button>
+                  <a href="https://www.linkedin.com/in/winston-zhang-29aa5b28b/" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="outline"
+                      className="group hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
+                    >
+                      <Linkedin className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+                      LinkedIn
+                    </Button>
+                  </a>
+                  <a href="https://github.com/winston6800" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="outline"
+                      className="group hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
+                    >
+                      <Github className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+                      GitHub
+                    </Button>
+                  </a>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -374,25 +379,14 @@ export default function App() {
             <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  <div className="flex items-center justify-center space-x-3 group cursor-pointer hover:text-primary transition-colors duration-300">
-                    <Mail className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="text-lg">winston@example.com</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-3 group cursor-pointer hover:text-primary transition-colors duration-300">
+                  <a href="https://www.linkedin.com/in/winston-zhang-29aa5b28b/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-3 group cursor-pointer hover:text-primary transition-colors duration-300">
                     <Linkedin className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="text-lg">linkedin.com/in/winston</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-3 group cursor-pointer hover:text-primary transition-colors duration-300">
+                    <span className="text-lg">linkedin.com/in/winston-zhang-29aa5b28b</span>
+                  </a>
+                  <a href="https://github.com/winston6800" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-3 group cursor-pointer hover:text-primary transition-colors duration-300">
                     <Github className="h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />
-                    <span className="text-lg">github.com/winston</span>
-                  </div>
-                  <Button size="lg" className="w-full group relative overflow-hidden mt-8">
-                    <span className="relative z-10 flex items-center justify-center">
-                      <Mail className="mr-2 h-5 w-5" />
-                      Send Message
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-                  </Button>
+                    <span className="text-lg">github.com/winston6800</span>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -405,30 +399,27 @@ export default function App() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4">
             <p className="text-center text-muted-foreground">
-              © 2024 Winston Zhang. Crafted with audacious vision and relentless execution.
+              © 2024 Winston Zhang.
             </p>
             <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="hover:text-primary hover:scale-110 transition-all duration-300"
-              >
-                <Github className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="hover:text-primary hover:scale-110 transition-all duration-300"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="hover:text-primary hover:scale-110 transition-all duration-300"
-              >
-                <Mail className="h-5 w-5" />
-              </Button>
+              <a href="https://github.com/winston6800" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="hover:text-primary hover:scale-110 transition-all duration-300"
+                >
+                  <Github className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="https://www.linkedin.com/in/winston-zhang-29aa5b28b/" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="hover:text-primary hover:scale-110 transition-all duration-300"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
