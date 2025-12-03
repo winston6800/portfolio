@@ -523,10 +523,10 @@ export default function App() {
             <div className="text-center mb-12">
               <GraduationCap className="h-10 w-10 text-primary mx-auto mb-4" />
               <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-                Also Available for Tutoring
+                Tutoring Background
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Teaching software engineering concepts through real-world project experience and production code examples.
+                Experienced in communicating complex technology concepts clearly and effectively through hands-on teaching and real-world project examples.
               </p>
             </div>
 
@@ -569,30 +569,13 @@ export default function App() {
                       - YouTube: https://www.youtube.com/embed/VIDEO_ID
                       - Vimeo: https://player.vimeo.com/video/VIDEO_ID
                       ============================================================================ */}
-                  <iframe
-                    className="absolute inset-0 w-full h-full"
-                    src="" // TODO: Add your video embed URL here
-                    // Google Drive format: "https://drive.google.com/file/d/FILE_ID/preview"
-                    // YouTube format: "https://www.youtube.com/embed/VIDEO_ID"
-                    title="Tutoring Demo Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                  {/* Placeholder - remove this div when you add your video URL above */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-muted/90 backdrop-blur-sm z-10">
-                    <div className="text-center px-4">
-                      <GraduationCap className="h-12 w-12 text-muted-foreground/50 mx-auto mb-3" />
-                      <p className="text-muted-foreground mb-1 font-medium">
-                        Tutoring Demo Video
-                      </p>
-                      <p className="text-xs text-muted-foreground/70">
-                        Add your video embed URL in page.tsx (line ~590)
-                      </p>
-                      <p className="text-xs text-muted-foreground/50 mt-2">
-                        Supports: Google Drive, YouTube, Vimeo
-                      </p>
-                    </div>
-                  </div>
+                   <iframe
+                     className="absolute inset-0 w-full h-full"
+                     src="https://drive.google.com/file/d/1z5JZcZ8RoHEHkJeon-x-xqI-uKlduJ3E/preview"
+                     title="Tutoring Demo Video"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowFullScreen
+                   />
                 </div>
               </CardContent>
             </Card>
