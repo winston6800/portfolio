@@ -158,7 +158,7 @@ export default function App() {
       color: "from-green-500 to-teal-600",
     },
     {
-      title: "readjjk X Mangabloom: manga colorization engine",
+      title: "readjjk",
       description: "First-ever website to fully colorize 272 chapters of Jujutsu Kaisen (5000+ images) using an advanced manga colorization engine. Built a scalable full-stack application with optimized image processing pipeline, efficient data management for thousands of high-resolution manga pages, and a responsive reader interface. Implements complex image serving architecture, chapter navigation system, and real-time page rendering with caching strategies for optimal performance.",
       image: "https://readjjkcolored.com/images/og-image.png", // Manga reader screenshot from website
       technologies: ["TypeScript", "React", "Next.js", "Image Processing", "Manga Reader", "Colorization Engine"],
