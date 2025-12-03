@@ -140,6 +140,24 @@ export default function App() {
   // ============================================================================
   const projects = [
     {
+      title: "readjjk",
+      description: "First-ever website to fully colorize 272 chapters of Jujutsu Kaisen (5000+ images) using an advanced manga colorization engine. Built a scalable full-stack application with optimized image processing pipeline, efficient data management for thousands of high-resolution manga pages, and a responsive reader interface. Implements complex image serving architecture, chapter navigation system, and real-time page rendering with caching strategies for optimal performance.",
+      image: "https://readjjkcolored.com/images/og-image.png", // Manga reader screenshot from website
+      technologies: ["TypeScript", "React", "Next.js", "Image Processing", "Manga Reader", "Colorization Engine"],
+      liveUrl: "https://readjjkcolored.com/",
+      githubUrl: "https://github.com/winston6800/jjk",
+      color: "from-orange-500 to-red-600",
+    },
+    {
+      title: "Loop Burn Engine",
+      description: "Productivity timer application with real-time cost tracking. Built with Next.js 15, Clerk authentication, and Neon PostgreSQL. Implements timer state management, productivity charts with Recharts, and hourly rate calculations. Features include task history tracking, cumulative productivity metrics, and distraction identification. Utilizes Prisma ORM for data persistence and implements server-side rendering for optimal performance.",
+      image: "https://placehold.co/1200x600/1e293b/a5f3fc?text=Loop+Burn", // TODO: Replace with "/loopburn-screenshot.png"
+      technologies: ["Next.js 15", "TypeScript", "Clerk", "PostgreSQL", "Prisma", "Recharts"],
+      liveUrl: null,
+      githubUrl: "https://github.com/winston6800/loopburn",
+      color: "from-yellow-500 to-orange-600",
+    },
+    {
       title: "Opal",
       description: "Chrome extension (Manifest V3) implementing real-time browser activity tracking with background service worker architecture. Built with TypeScript, React 18, and Vite. Features include content script injection for tab visibility detection, Chrome Storage API integration for cross-device state synchronization, and interval-based time accumulation with 30-second precision. Implements state machine pattern for pet UI states and handles edge cases including tab switching, page visibility changes, and daily reset logic.",
       image: "https://placehold.co/1200x600/1e293b/a5f3fc?text=Opal", // TODO: Replace with "/opal-screenshot.png" after adding image to /public folder
@@ -158,15 +176,6 @@ export default function App() {
       color: "from-green-500 to-teal-600",
     },
     {
-      title: "readjjk",
-      description: "First-ever website to fully colorize 272 chapters of Jujutsu Kaisen (5000+ images) using an advanced manga colorization engine. Built a scalable full-stack application with optimized image processing pipeline, efficient data management for thousands of high-resolution manga pages, and a responsive reader interface. Implements complex image serving architecture, chapter navigation system, and real-time page rendering with caching strategies for optimal performance.",
-      image: "https://readjjkcolored.com/images/og-image.png", // Manga reader screenshot from website
-      technologies: ["TypeScript", "React", "Next.js", "Image Processing", "Manga Reader", "Colorization Engine"],
-      liveUrl: "https://readjjkcolored.com/",
-      githubUrl: "https://github.com/winston6800/jjk",
-      color: "from-orange-500 to-red-600",
-    },
-    {
       title: "Personal Calendar Tracker",
       description: "Next.js 15 application with Prisma ORM for daily data tracking and visualization. Implements calendar grid component with date-fns for date manipulation, RESTful API routes for data persistence, and responsive design with Tailwind CSS. Features include date picker integration, CRUD operations with optimistic UI updates, and calendar view with activity indicators. Utilizes React Server Components for efficient rendering and client-side state for interactive elements.",
       image: "https://placehold.co/1200x600/1e293b/a5f3fc?text=Personal+Calendar", // TODO: Replace with "/personalcal-screenshot.png"
@@ -183,15 +192,6 @@ export default function App() {
       liveUrl: null,
       githubUrl: "https://github.com/winston6800/momentumos",
       color: "from-cyan-500 to-blue-600",
-    },
-    {
-      title: "Loop Burn Engine",
-      description: "Productivity timer application with real-time cost tracking. Built with Next.js 15, Clerk authentication, and Neon PostgreSQL. Implements timer state management, productivity charts with Recharts, and hourly rate calculations. Features include task history tracking, cumulative productivity metrics, and distraction identification. Utilizes Prisma ORM for data persistence and implements server-side rendering for optimal performance.",
-      image: "https://placehold.co/1200x600/1e293b/a5f3fc?text=Loop+Burn", // TODO: Replace with "/loopburn-screenshot.png"
-      technologies: ["Next.js 15", "TypeScript", "Clerk", "PostgreSQL", "Prisma", "Recharts"],
-      liveUrl: null,
-      githubUrl: "https://github.com/winston6800/loopburn",
-      color: "from-yellow-500 to-orange-600",
     },
   ];
 
