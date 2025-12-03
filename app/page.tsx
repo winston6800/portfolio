@@ -503,7 +503,7 @@ export default function App() {
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
                   <Image
-                    src="https://placehold.co/300x300/1e293b/a5f3fc?text=Winston"
+                    src="https://drive.google.com/uc?export=view&id=1ArJmZWIne2mnH6ua0R84xpYpW_8VjJx7"
                     alt="Winston Zhang"
                     width={300}
                     height={300}
