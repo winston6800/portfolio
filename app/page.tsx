@@ -142,7 +142,7 @@ export default function App() {
     {
       title: "readjjk",
       description: "First-ever website to fully colorize 272 chapters of Jujutsu Kaisen (5000+ images) using an advanced manga colorization engine. Built a scalable full-stack application with optimized image processing pipeline, efficient data management for thousands of high-resolution manga pages, and a responsive reader interface. Implements complex image serving architecture, chapter navigation system, and real-time page rendering with caching strategies for optimal performance.",
-      image: "https://readjjkcolored.com/images/og-image.png", // Manga reader screenshot from website
+      image: "https://placehold.co/1200x600/1e293b/a5f3fc?text=readjjk", // TODO: Replace with "/readjjk-screenshot.png"
       technologies: ["TypeScript", "React", "Next.js", "Image Processing", "Manga Reader", "Colorization Engine"],
       liveUrl: "https://readjjkcolored.com/",
       githubUrl: "https://github.com/winston6800/jjk",
